@@ -1,0 +1,39 @@
+Ajouter une nouvelle personne:
+
+Méthode: POST
+URL: http://localhost:5000/add_person
+Headers:
+Content-Type: application/json
+Body:
+
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "date_of_birth": "1990-01-01"
+}
+Ajouter un emploi à une personne:
+
+Méthode: POST
+URL: http://localhost:5000/add_job/{person_id} (remplacez {person_id} par l'ID de la personne)
+Headers:
+Content-Type: application/json
+Body:
+
+{
+    "company_name": "ABC Inc.",
+    "position": "Software Engineer",
+    "start_date": "2022-01-01",
+    "end_date": "2023-01-01"
+}
+Récupérer toutes les personnes:
+
+Méthode: GET
+URL: http://localhost:5000/get_all_people
+Récupérer toutes les personnes travaillant pour une entreprise donnée:
+
+Méthode: GET
+URL: http://localhost:5000/get_people_by_company/{company_name} (remplacez {company_name} par le nom de l'entreprise)
+Récupérer tous les emplois d'une personne entre deux plages de dates:
+
+Méthode: GET
+URL: http://localhost:5000/get_jobs_by_dates/{person_id}?start_date=2022-01-01&end_date=2023-01-01 (remplacez {person_id} par l'ID de la personne)
